@@ -572,7 +572,8 @@ PRODUCT_FULL_TREBLE_OVERRIDE := true
 
 # Charger
 PRODUCT_PACKAGES += \
-    libsuspend
+    libsuspend \
+    charger_res_images
 
 # WiFi
 PRODUCT_PACKAGES += \
