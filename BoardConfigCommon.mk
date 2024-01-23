@@ -101,6 +101,9 @@ BOARD_KERNEL_CMDLINE += ip6table_raw.raw_before_defrag=1
 BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
 
 # Prebuilt Kernel
+# Fix prebuilt build
+$(shell mkdir -p $(OUT_DIR)/target/product/stone/obj/KERNEL_OBJ/usr)
+
 BOARD_KERNEL_BINARIES := kernel
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)-kernel/dtbo.img
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)-kernel/kernel
@@ -110,9 +113,6 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)-kernel/kernel:kernel \
     $(call find-copy-subdir-files,*,$(DEVICE_PATH)-kernel/ramdisk-modules/,$(TARGET_COPY_OUT_VENDOR_RAMDISK)/lib/modules) \
     $(call find-copy-subdir-files,*,$(DEVICE_PATH)-kernel/vendor-modules/,$(TARGET_COPY_OUT_VENDOR)/lib/modules)
-
-# Fix prebuilt build
-$(shell mkdir -p $(OUT_DIR)/target/product/stone/obj/KERNEL_OBJ/usr)
 
 # Media
 TARGET_USES_ION := true
