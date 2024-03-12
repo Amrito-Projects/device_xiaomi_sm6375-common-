@@ -363,7 +363,8 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # RRO Overlays
 PRODUCT_PACKAGES += \
-    NfcOverlay
+    NfcOverlay \
+    ApertureOverlay
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
