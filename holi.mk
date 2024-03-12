@@ -365,7 +365,8 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     NfcOverlay \
     ApertureOverlay \
-    ApertureQRScannerOverlay
+    ApertureQRScannerOverlay \
+    ApertureIconOverlay
 
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
