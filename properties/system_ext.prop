@@ -3,3 +3,7 @@ persist.vendor.dpm.feature=11
 
 # Media
 vendor.media.target_variant=_holi
+
+
+# Brightness Curve
+persist.sys.brightness.low.gamma=true
