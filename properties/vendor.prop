@@ -364,6 +364,9 @@ ro.hardware.wlan.dbs=0
 # Zygote
 zygote.critical_window.minute=10
 
+# Volume steps
+ro.config.media_vol_steps=25
+
 # Dolby
 vendor.audio.dolby.ds2.enabled=true
 vendor.audio.dolby.ds2.hardbypass=false
