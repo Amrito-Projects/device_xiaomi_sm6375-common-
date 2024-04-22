@@ -95,6 +95,10 @@ on late-fs
     start console
     mount_all --late
 
+on property:sys.boot_completed=1
+    # STOP EATING MY BATTERY AFTER 100H OF UPTIME FUCK YOU
+    stop statsd
+
 on post-fs-data
     mkdir /data/vendor/mac_addr 0771 system system
     mkdir /data/vendor/thermal 0771 root system
